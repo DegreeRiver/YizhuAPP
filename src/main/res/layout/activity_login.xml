@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/mainback"
+    android:orientation="vertical"
+    tools:context="com.dujiang.myapplication.LoginActivity">
+
+    <!--登录界面介绍-->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_clear"
+            android:layout_margin="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/login12" />
+
+    </LinearLayout>
+    <!--手机号-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:background="@drawable/editbox_back"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/iv1"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:paddingTop="5dp"
+            android:src="@drawable/phone1" />
+
+        <EditText
+            android:id="@+id/login_et_phone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:digits="0123456789"
+            android:hint="请输入手机号"
+            android:maxLength="11"
+            android:paddingTop="8dp" />
+    </LinearLayout>
+    <!--身份证号-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:background="@drawable/editbox_back"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/iv2"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:paddingTop="5dp"
+            android:src="@drawable/card1" />
+
+        <EditText
+            android:id="@+id/login_et_card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:digits="0123456789X"
+            android:hint="请输入身份证号"
+            android:paddingTop="8dp" />
+
+    </LinearLayout>
+
+    <!--密码-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:background="@drawable/editbox_back"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/iv3"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:paddingTop="5dp"
+            android:src="@drawable/pwd" />
+
+        <EditText
+            android:id="@+id/login_et_pwd"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@null"
+            android:hint="请输入密码"
+            android:inputType="textPassword"
+            android:paddingTop="8dp" />
+
+        <ToggleButton
+            android:id="@+id/tb_password_visibility"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/button_visibility_bg"
+            android:minHeight="@null"
+            android:minWidth="@null"
+            android:text="@null"
+            android:textOff="@null"
+            android:textOn="@null" />
+    </LinearLayout>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="24dp"
+        android:layout_margin="12dp"
+        android:orientation="horizontal">
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/login_tv_register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="一次性注册"
+            android:textColor="#ff0000"
+            android:textSize="18dp" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="24dp"
+            android:layout_marginLeft="8dp"
+            android:background="#dd000000">
+
+        </View>
+
+        <TextView
+            android:id="@+id/login_tv_parents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" 亲友登陆"
+            android:textSize="18dp" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/login_btn"
+        android:layout_width="260dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/btn_circle"
+        android:text="登陆"
+        android:textColor="#ffffff" />
+
+
+</LinearLayout>

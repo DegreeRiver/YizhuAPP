@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/mainback"
+    android:id="@+id/activity_parents_login"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.dujiang.myapplication.ParentsLoginActivity">
+
+    <ImageView
+        android:layout_margin="6dp"
+        android:src="@drawable/parentlogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <LinearLayout
+        android:padding="5dp"
+        android:layout_margin="12dp"
+        android:background="@drawable/editbox_back"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="9dp"
+            android:src="@drawable/phone1"
+            android:layout_width="36dp"
+            android:layout_height="36dp" />
+        <EditText
+            android:layout_marginLeft="5dp"
+            android:background="@null"
+            android:layout_marginTop="15dp"
+            android:id="@+id/login_input_phone_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="请输入手机号" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:padding="5dp"
+        android:background="@drawable/editbox_back"
+        android:layout_margin="12dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <ImageView
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="9dp"
+        android:src="@drawable/ic_duanxin"
+        android:layout_width="36dp"
+        android:layout_height="36dp" />
+    <EditText
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="15dp"
+        android:background="@null"
+        android:id="@+id/login_input_code_et"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="请输入验证码" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <Button
+        android:textColor="#ffffff"
+        android:background="@drawable/btn_circle"
+        android:id="@+id/login_request_code_btn"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:text="获取验证码"
+        android:layout_weight="0.28" />
+        <View
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"/>
+    <Button
+        android:textColor="#ffffff"
+        android:background="@drawable/btn_circle"
+        android:id="@+id/login_commit_btn"
+        android:layout_weight="0.28"
+        android:layout_width="95dp"
+        android:layout_height="95dp"
+        android:text="点击登陆" />
+    </LinearLayout>
+</LinearLayout>

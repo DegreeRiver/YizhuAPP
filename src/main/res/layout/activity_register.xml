@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_register"
+    android:background="@drawable/mainback"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.dujiang.myapplication.RegisterActivity">
+    <ImageView
+        android:layout_margin="12dp"
+        android:src="@drawable/reg12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+    <!--手机号-->
+    <LinearLayout
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:background="@drawable/editbox_back"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:paddingTop="5dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/phone1" />
+
+        <EditText
+            android:digits="0123456789"
+            android:paddingTop="8dp"
+            android:background="@null"
+            android:id="@+id/reg_et_phone"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="请输入手机号" />
+    </LinearLayout>
+
+    <!--身份证号-->
+    <LinearLayout
+        android:padding="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:background="@drawable/editbox_back"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:paddingTop="5dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/card1" />
+
+        <EditText
+            android:digits="0123456789X"
+            android:paddingTop="8dp"
+            android:background="@null"
+            android:id="@+id/reg_et_card"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="请输入身份证号" />
+    </LinearLayout>
+
+    <!--第一次输入密码-->
+    <LinearLayout
+        android:padding="5dp"
+        android:background="@drawable/editbox_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:paddingTop="5dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/pwd" />
+
+        <EditText
+            android:paddingTop="8dp"
+            android:background="@null"
+            android:id="@+id/reg_et_pwd1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="请输入密码" />
+    </LinearLayout>
+    <!--第二次输入密码-->
+    <LinearLayout
+        android:padding="5dp"
+        android:background="@drawable/editbox_back"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:paddingTop="5dp"
+            android:layout_width="36dp"
+            android:layout_height="36dp"
+            android:src="@drawable/pwd" />
+
+        <EditText
+            android:paddingTop="8dp"
+            android:background="@null"
+            android:id="@+id/reg_et_pwd2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="请再次输入密码" />
+    </LinearLayout>
+
+    <Button
+        android:layout_gravity="center_horizontal"
+        android:textColor="#ffffff"
+        android:background="@drawable/btn_circle"
+        android:id="@+id/reg_btn"
+        android:layout_width="260dp"
+        android:layout_height="80dp"
+        android:text="注册" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:orientation="horizontal">
+
+        <CheckBox
+            android:id="@+id/reg_cb_rem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="请确定你已经牢记密码！" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <TextView
+            android:id="@+id/reg_tv_tologin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="已经有账号立即登录" />
+    </LinearLayout>
+</LinearLayout>
+

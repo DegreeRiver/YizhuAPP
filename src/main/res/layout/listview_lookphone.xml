@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <!--Id不需要显示-->
+    <TextView
+        android:id="@+id/tv_look_id"
+        android:layout_width="0dp"
+        android:layout_height="0dp" />
+    <!--Desc-->
+    <LinearLayout
+        android:background="@drawable/pink"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="120dp">
+    <LinearLayout
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="12dp"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="亲友的姓名："
+            android:textColor="#000000"
+            android:textSize="24dp" />
+        <TextView
+            android:textSize="18dp"
+            android:textColor="#000000"
+            android:id="@+id/tv_look_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <!--Phone-->
+    <LinearLayout
+        android:layout_marginTop="12dp"
+        android:layout_marginLeft="12dp"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="亲友手机号："
+            android:textColor="#000000"
+            android:textSize="24dp" />
+        <TextView
+            android:textSize="18dp"
+            android:textColor="#000000"
+            android:id="@+id/tv_look_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    </LinearLayout>
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="25dp" />
+
+</LinearLayout>
