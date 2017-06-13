@@ -8,13 +8,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
-        <ImageView
-            android:src="@mipmap/ic_launcher"
+
+        <TextView
+            android:textSize="24dp"
+            android:textColor="#000"
+            android:layout_marginBottom="20dp"
+            android:text="您最该留下的,我来帮您留下"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
         <TextView
-            android:textSize="50dp"
-            android:text="THREE"
+            android:textSize="24dp"
+            android:text="您最想留给的人，我来帮您留给Ta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
     </LinearLayout>
@@ -27,9 +31,9 @@
         android:background="@drawable/button_bg"
         android:layout_marginTop="250dp"
         android:id="@+id/btn_start"
-        android:text="进入主页"
+        android:text="触摸进入"
         android:textColor="@android:color/white"
-        android:layout_width="150dp"
-        android:layout_height="wrap_content" />
+        android:layout_width="100dp"
+        android:layout_height="35dp" />
 
 </RelativeLayout>

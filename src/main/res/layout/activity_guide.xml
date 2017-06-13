@@ -6,7 +6,9 @@
     <android.support.v4.view.ViewPager
         android:id="@+id/mViewPage"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
 
     </android.support.v4.view.ViewPager>
 
@@ -20,20 +22,20 @@
 
         <ImageView
             android:id="@+id/point1"
-            android:layout_width="10dp"
-            android:layout_height="10dp" />
+            android:layout_width="8dp"
+            android:layout_height="8dp" />
 
         <ImageView
             android:id="@+id/point2"
-            android:layout_width="10dp"
-            android:layout_height="10dp"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp" />
 
         <ImageView
             android:id="@+id/point3"
-            android:layout_width="10dp"
-            android:layout_height="10dp" />
+            android:layout_width="8dp"
+            android:layout_height="8dp" />
     </LinearLayout>
 
     <ImageView
@@ -41,7 +43,7 @@
         android:src="@drawable/black"
         android:layout_marginTop="15dp"
         android:layout_marginRight="15dp"
-        android:layout_width="wrap_content"
+        android:layout_width="50dp"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true" />
 

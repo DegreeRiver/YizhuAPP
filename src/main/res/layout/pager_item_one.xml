@@ -5,13 +5,12 @@
     android:gravity="center"
     android:orientation="vertical">
     <ImageView
-        android:src="@mipmap/ic_launcher"
+        android:src="@drawable/ic_safe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
-    <TextView
-        android:textSize="50dp"
-        android:text="ONE"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+    <ImageView
+        android:src="@drawable/safe12"
+        android:layout_width="175dp"
+        android:layout_height="175dp" />
 
 </LinearLayout>
