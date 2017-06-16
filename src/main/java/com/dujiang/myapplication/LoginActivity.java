@@ -2,9 +2,11 @@ package com.dujiang.myapplication;
 
 import android.animation.Animator;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Handler;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.method.HideReturnsTransformationMethod;
@@ -19,15 +21,24 @@ import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ToggleButton;
 
+import com.bumptech.glide.Glide;
+import com.dujiang.myapplication.util.HttpUtil;
 import com.dujiang.myapplication.util.ParticleView;
 import com.dujiang.myapplication.util.SQLiteUserHelper;
 import com.dujiang.myapplication.vo.User;
+
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.Response;
+
+
+import java.io.IOException;
 
 public class LoginActivity extends AppCompatActivity {
 
     private TextView tvRegister, tvParents;
 
-    private ImageView ivClear, iv1, iv2, iv3;
+    private ImageView  iv1, iv2, iv3,bingPicImg;
 
     private EditText etPhone, etCard, etPwd;
 
@@ -41,6 +52,11 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
+        //加载BING上的每日一图
+        bingPicImg = (ImageView) findViewById(R.id.bing_pic_img);
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        String bingPic = prefs.getString("bing_pic", null);
+        Glide.with(this).load(bingPic).into(bingPicImg);
         final ParticleView particleAnimator = new ParticleView(LoginActivity.this, 2000);
         particleAnimator.setOnAnimationListener(new ParticleView.OnAnimationListener() {
             @Override
@@ -79,7 +95,6 @@ public class LoginActivity extends AppCompatActivity {
                 particleAnimator.boom(view);
             }
         });
-        ivClear = (ImageView) findViewById(R.id.iv_clear);
         tvParents = (TextView) findViewById(R.id.login_tv_parents);
         tvRegister = (TextView) findViewById(R.id.login_tv_register);
         etPhone = (EditText) findViewById(R.id.login_et_phone);
@@ -88,12 +103,7 @@ public class LoginActivity extends AppCompatActivity {
         btnLogin = (Button) findViewById(R.id.login_btn);
         tbPasswordVisibility = (ToggleButton) findViewById(R.id.tb_password_visibility);
 
-        ivClear.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                particleAnimator.boom(view);
-            }
-        });
+
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -158,6 +168,7 @@ public class LoginActivity extends AppCompatActivity {
         tbPasswordVisibility.setOnCheckedChangeListener(new ToggleButtonClick());
 
     }
+
 
     //3、密码可见性按钮监听
     private class ToggleButtonClick implements CompoundButton.OnCheckedChangeListener {

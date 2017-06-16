@@ -1,67 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_first"
-    android:gravity="center_horizontal"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#FFFFFF"
-    tools:context="com.dujiang.myapplication.SplashActivity">
+    android:layout_height="match_parent">
 
-
-    <!--<Button
-        android:id="@+id/btn_go_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/imageView4"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="46dp"
-        android:background="@drawable/button_back_changge"
-        android:text="点击跳过" />
--->
     <ImageView
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:src="@drawable/logo12"
-        android:layout_marginTop="93dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginRight="20dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:id="@+id/bing_pic_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
-    <TextView
-        android:id="@+id/tv_advt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="right"
-        android:text="3"
-        android:textColor="#121212"
-        android:textSize="20sp"
-
-        android:layout_marginStart="28dp"
-        android:layout_marginBottom="35dp"
-        android:layout_alignBottom="@+id/imageView"
-        android:layout_alignStart="@+id/imageView" />
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/logo"
-        android:layout_marginLeft="25dp"
-        android:layout_marginRight="25dp"
-        android:layout_above="@+id/textView2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="25dp" />
+    <RelativeLayout
+        android:id="@+id/activity_first"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:gravity="center_horizontal"
+        tools:context="com.dujiang.myapplication.SplashActivity">
 
 
-    <TextView
-        android:textSize="12dp"
-        android:textColor="#000000"
-        android:text="Copyright @2016 made in du wechat = dujiang0311--版本1.3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textView2"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+        <!--<Button
+            android:id="@+id/btn_go_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageView4"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="46dp"
+            android:background="@drawable/button_back_changge"
+            android:text="点击跳过" />
+    -->
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="93dp"
+            android:src="@drawable/logo12" />
 
-</RelativeLayout>
+        <TextView
+            android:id="@+id/tv_advt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageView"
+            android:layout_alignStart="@+id/imageView"
+            android:layout_marginBottom="35dp"
+            android:layout_marginStart="28dp"
+
+            android:gravity="right"
+            android:text="3"
+            android:textColor="#121212"
+            android:textSize="20sp" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_above="@+id/textView2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="25dp"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:src="@drawable/logo" />
+
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="Copyright @2016 made in du wechat = dujiang0311--版本1.3"
+            android:textColor="#000000"
+            android:textSize="12dp" />
+
+    </RelativeLayout>
+</FrameLayout>

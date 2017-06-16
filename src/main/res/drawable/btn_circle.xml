@@ -2,24 +2,17 @@
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
         <shape android:shape="oval" >
-            <solid android:color="#adf2ea" />
+            <solid android:color="#86000000" />
             <size android:width="240dp" android:height="240dp"/>
         </shape>
     </item>
 
-    <item android:bottom="12dp" android:right="12dp" android:top="12dp" android:left="12dp" >
+    <item android:bottom="0dp" android:right="0dp" android:top="0dp" android:left="0dp" >
         <selector xmlns:android="http://schemas.android.com/apk/res/android">
             <item android:state_pressed="true">
                 <shape android:shape="oval" >
-                    <solid android:color="#90db7d" />
-                    <size android:width="238dp" android:height="238dp"/>
-                </shape>
-            </item>
-
-            <item>
-                <shape android:shape="oval" >
-                    <solid android:color="#e97171" />
-                    <size android:width="238dp" android:height="238dp"/>
+                    <solid android:color="#71a19d9d" />
+                    <size android:width="240dp" android:height="240dp"/>
                 </shape>
             </item>
 

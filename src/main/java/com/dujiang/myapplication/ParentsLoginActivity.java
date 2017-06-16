@@ -1,11 +1,13 @@
 package com.dujiang.myapplication;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Handler;
 import android.os.Message;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatDelegate;
 import android.text.TextUtils;
 import android.util.Log;
@@ -15,15 +17,19 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.SimpleAdapter;
 import android.widget.Toast;
 import android.widget.FrameLayout.LayoutParams;
 
+import com.bumptech.glide.Glide;
 import com.dujiang.myapplication.dao.FileDao;
+import com.dujiang.myapplication.util.HttpUtil;
 import com.dujiang.myapplication.util.SQliteHelper;
 import com.dujiang.myapplication.vo.Phone;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -32,6 +38,9 @@ import java.util.PriorityQueue;
 
 import cn.smssdk.EventHandler;
 import cn.smssdk.SMSSDK;
+import okhttp3.Call;
+import okhttp3.Callback;
+import okhttp3.Response;
 
 public class ParentsLoginActivity extends Activity implements OnClickListener {
 
@@ -50,12 +59,19 @@ public class ParentsLoginActivity extends Activity implements OnClickListener {
     // 注册按钮
     private Button commitBtn;
 
+    private ImageView bingPicImg;
+
     int i = 30;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_parents_login);
 
+        //加载BING上的每日一图
+        bingPicImg = (ImageView) findViewById(R.id.bing_pic_img);
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        String bingPic = prefs.getString("bing_pic", null);
+        Glide.with(this).load(bingPic).into(bingPicImg);
         init();
 
     }
