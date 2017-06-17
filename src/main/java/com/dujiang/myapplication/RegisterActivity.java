@@ -31,16 +31,16 @@ public class RegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-//加载BING上的每日一图
+        //加载BING上的每日一图
         bingPicImg = (ImageView) findViewById(R.id.bing_pic_img);
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         String bingPic = prefs.getString("bing_pic", null);
         Glide.with(this).load(bingPic).into(bingPicImg);
         // 初始化Toolbar
-       /* Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
+        /* Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
         toolbar.setTitle("用户注册");*/
         // 导航图标
-     /*   toolbar.setNavigationIcon(R.drawable.back);
+        /*   toolbar.setNavigationIcon(R.drawable.back);
         // 导航图标点击事件
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override

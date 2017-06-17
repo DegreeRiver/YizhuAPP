@@ -3,7 +3,9 @@ package com.dujiang.myapplication;
 import android.animation.Animator;
 import android.app.Fragment;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Handler;
+import android.preference.PreferenceManager;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
@@ -13,6 +15,7 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 
+import com.bumptech.glide.Glide;
 import com.dujiang.myapplication.util.ParticleView;
 
 import java.util.Date;
@@ -21,13 +24,19 @@ import static android.widget.RadioButton.*;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ImageView ivAdd, ivSearch, ivAddParent, ivSelectParent;
+    private ImageView ivAdd, ivSearch, ivAddParent, ivSelectParent,bingPicImg;
     private Date backTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //加载BING上的每日一图
+        bingPicImg = (ImageView) findViewById(R.id.bing_pic_img);
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        String bingPic = prefs.getString("bing_pic", null);
+        Glide.with(this).load(bingPic).into(bingPicImg);
         final ParticleView particleAnimator = new ParticleView(MainActivity.this, 2000);
         particleAnimator.setOnAnimationListener(new ParticleView.OnAnimationListener() {
             @Override

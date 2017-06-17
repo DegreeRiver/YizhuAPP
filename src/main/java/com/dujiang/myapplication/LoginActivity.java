@@ -63,7 +63,6 @@ public class LoginActivity extends AppCompatActivity {
             public void onAnimationStart(View view, Animator animation) {
                 view.setVisibility(View.INVISIBLE);
             }
-
             @Override
             public void onAnimationEnd(View view, Animator animation) {
 
