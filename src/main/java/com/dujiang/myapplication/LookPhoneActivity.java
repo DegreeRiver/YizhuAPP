@@ -1,13 +1,17 @@
 package com.dujiang.myapplication;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 
+import com.bumptech.glide.Glide;
 import com.dujiang.myapplication.dao.FileDao;
 import com.dujiang.myapplication.vo.Phone;
 
@@ -19,10 +23,17 @@ import java.util.Map;
 public class LookPhoneActivity extends AppCompatActivity {
 
     private ListView lvMyPhone;
+    private ImageView bingPicImg;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_look_phone);
+        //加载BING上的每日一图
+        bingPicImg = (ImageView) findViewById(R.id.bing_pic_img);
+        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
+        String bingPic = prefs.getString("bing_pic", null);
+        Glide.with(this).load(bingPic).into(bingPicImg);
+
 
         lvMyPhone = (ListView) findViewById(R.id.lv_my_phone);
 
@@ -58,7 +69,14 @@ public class LookPhoneActivity extends AppCompatActivity {
                 intent.putExtra("name",name);
                 intent.putExtra("phone",phone);
                 startActivity(intent);
+                finish();
             }
         });
+    }
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(LookPhoneActivity.this,MainActivity.class));
+        finish();
     }
 }

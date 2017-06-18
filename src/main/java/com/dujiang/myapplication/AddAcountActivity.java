@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -61,10 +62,29 @@ public class AddAcountActivity extends AppCompatActivity {
                     account.setType(etType.getText().toString());
                     account.setUserId(etUserid.getText().toString());
                     account.setPwd(etPwd.getText().toString());
-                    account.setOther(etOther.getText().toString());
+                    String other = etOther.getText().toString();
+                    if (TextUtils.isEmpty(other)){
+                        account.setOther("我什么也不想说。");
+                    }else {
+                        account.setOther(etOther.getText().toString());
+                    }
                     if (dao.addAcount(account) < 0) {
                         Toast.makeText(AddAcountActivity.this, "没有成功添加...", Toast.LENGTH_SHORT).show();
                     } else {
+                        if ("".equals(account.getType())){
+                            Toast.makeText(AddAcountActivity.this, "请输入账号类型", Toast.LENGTH_LONG).show();
+                            return;
+                        }
+                        if ("".equals(account.getPwd())){
+                            Toast.makeText(AddAcountActivity.this, "请输入账号密码", Toast.LENGTH_LONG).show();
+                            return;
+                        }
+                        if ("".equals(account.getUserId())){
+                            Toast.makeText(AddAcountActivity.this, "请输入账号", Toast.LENGTH_LONG).show();
+                            return;
+                        }
+
+
                         Toast.makeText(AddAcountActivity.this, "已经成功添加...", Toast.LENGTH_LONG).show();
                         Intent intent = new Intent(AddAcountActivity.this, MainActivity.class);
                         startActivity(intent);
@@ -84,9 +104,9 @@ public class AddAcountActivity extends AppCompatActivity {
     //点击返回键无效
     @Override
     public void onBackPressed() {
-
-        return ;
-
+        Intent intent1 = new Intent(AddAcountActivity.this, MainActivity.class);
+        startActivity(intent1);
+        finish();
     }
 
 }

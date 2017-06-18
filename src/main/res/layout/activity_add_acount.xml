@@ -2,15 +2,17 @@
 
 
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <ImageView
         android:id="@+id/bing_pic_img"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop" />
 
-    <LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    <LinearLayout
         android:id="@+id/activity_add_acount"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -18,112 +20,131 @@
         android:orientation="vertical"
         tools:context="com.dujiang.myapplication.AddAcountActivity">
 
-        <!--账号类型-->
         <LinearLayout
+            android:background="#53ffffff"
+            android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="5dp">
+            android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:src="@drawable/type" />
 
-            <EditText
-                android:id="@+id/et_add_type"
-                android:layout_width="0dp"
+            <!--账号ID-->
+            <LinearLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="8dp"
-                android:layout_weight="1"
-                android:hint="账号类型" />
+                android:layout_marginTop="5dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/id" />
+
+                <EditText
+                    android:id="@+id/et_add_userid"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:hint="Account" />
+            </LinearLayout>
+            <!--账号类型-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/type" />
+
+                <EditText
+                    android:id="@+id/et_add_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:hint="Account Type" />
+            </LinearLayout>
+
+
+            <!--账号密码-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/pwd12" />
+
+                <EditText
+                    android:id="@+id/et_add_pwd"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:hint="Account Password" />
+            </LinearLayout>
+
+            <!--账号备注-->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/other" />
+
+                <EditText
+                    android:id="@+id/et_add_other"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:hint="Leave a word for your friends" />
+            </LinearLayout>
         </LinearLayout>
 
-        <!--账号ID-->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:orientation="horizontal"
-            android:padding="5dp">
+            android:layout_height="100dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
+            android:orientation="horizontal">
 
-            <ImageView
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:src="@drawable/id" />
-
-            <EditText
-                android:id="@+id/et_add_userid"
+            <Button
+                android:id="@+id/btn_add_save"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="12dp"
                 android:layout_weight="1"
-                android:hint="账号ID" />
-        </LinearLayout>
+                android:background="@drawable/btn_circle"
+                android:text="保存"
+                android:textColor="#fff" />
 
-        <!--账号密码-->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:orientation="horizontal"
-            android:padding="5dp">
-
-            <ImageView
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:src="@drawable/pwd12" />
-
-            <EditText
-                android:id="@+id/et_add_pwd"
+            <Button
+                android:id="@+id/btn_add_cancel"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="12dp"
                 android:layout_weight="1"
-                android:hint="账号密码" />
+                android:background="@drawable/btn_circle"
+                android:text="取消"
+                android:textColor="#fff" />
         </LinearLayout>
-
-        <!--账号备注-->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:orientation="horizontal"
-            android:padding="5dp">
-
-            <ImageView
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:src="@drawable/other" />
-
-            <EditText
-                android:id="@+id/et_add_other"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="8dp"
-                android:layout_weight="1"
-                android:hint="账号备注" />
-        </LinearLayout>
-
-        <Button
-            android:id="@+id/btn_add_save"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:background="@drawable/btn_change"
-            android:text="保存" />
-
-        <Button
-            android:id="@+id/btn_add_cancel"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:background="@drawable/btn_change"
-            android:text="取消" />
-
     </LinearLayout>
 </FrameLayout>

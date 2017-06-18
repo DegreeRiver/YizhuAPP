@@ -120,7 +120,7 @@
     </LinearLayout>
 
     <LinearLayout
-
+android:background="#56000000"
         android:layout_width="match_parent"
         android:layout_height="24dp"
         android:layout_margin="12dp"
@@ -132,12 +132,11 @@
             android:layout_weight="1" />
 
         <TextView
-            android:background="#47000000"
             android:id="@+id/login_tv_register"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="一次性注册"
-            android:textColor="#ff0000"
+            android:textColor="#e74040"
             android:textSize="18dp" />
 
         <View
@@ -149,7 +148,6 @@
         </View>
 
         <TextView
-            android:background="#47000000"
             android:textColor="#fff"
             android:id="@+id/login_tv_parents"
             android:layout_width="wrap_content"

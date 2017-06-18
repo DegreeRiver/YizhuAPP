@@ -63,12 +63,7 @@ public class SplashActivity extends AppCompatActivity {
         bingPicImg = (ImageView) findViewById(R.id.bing_pic_img);
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(this);
         String bingPic = prefs.getString("bing_pic", null);
-        if (bingPic != null) {
-            Glide.with(this).load(bingPic).into(bingPicImg);
-            loadBingPic();
-        } else {
-            loadBingPic();
-        }
+        loadBingPic();
         textView = (TextView) findViewById(R.id.tv_advt);
         //先声明Handler，再书写下面的延迟。
 

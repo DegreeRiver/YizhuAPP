@@ -8,11 +8,10 @@
         android:id="@+id/tv_look_id"
         android:layout_width="0dp"
         android:layout_height="0dp" />
-    <!--Desc-->
     <LinearLayout
-        android:background="@drawable/pink"
+        android:background="#64ffffff"
         android:orientation="vertical"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="120dp">
     <LinearLayout
         android:layout_marginTop="24dp"

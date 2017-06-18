@@ -19,12 +19,8 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/NoActivityFullscreen">
-        <activity android:name=".MainActivity" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".MainActivity">
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".LoginActivity" />
         <activity android:name=".RegisterActivity" />
@@ -38,11 +34,18 @@
         <activity android:name=".AddParentActivity" />
         <activity android:name=".LookPhoneActivity" />
         <activity android:name=".ManagePhoneActivity" />
-        <activity android:name=".SplashActivity"
+        <activity
+            android:name=".SplashActivity"
             android:theme="@style/NoActivityFullscreen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
 
         </activity>
-        <activity android:name=".GuideActivity"
+        <activity
+            android:name=".GuideActivity"
             android:theme="@style/NoActivityFullscreen">
 
 

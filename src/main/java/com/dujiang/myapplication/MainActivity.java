@@ -68,6 +68,7 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intentSearchAcount = new Intent(MainActivity.this, SearchAccountActivity.class);
                 startActivity(intentSearchAcount);
+                finish();
             }
         });
         ivAddParent.setOnClickListener(new OnClickListener() {
@@ -84,6 +85,7 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent intent2 = new Intent(MainActivity.this, LookPhoneActivity.class);
                 startActivity(intent2);
+                finish();
             }
         });
 
