@@ -112,9 +112,9 @@ public class RegisterActivity extends AppCompatActivity {
                     intent.putExtra("phone", phone);
                     intent.putExtra("card", card);
                     setResult(RESULT_OK, intent);
+                    startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
                     finish();
                 } catch (Exception e) {
-
                     e.printStackTrace();
                     Toast.makeText(RegisterActivity.this, "注册失败！", Toast.LENGTH_SHORT).show();
                 } finally {
