@@ -255,4 +255,10 @@ public class ParentsLoginActivity extends Activity implements OnClickListener {
         SMSSDK.unregisterAllEventHandler();
         super.onDestroy();
     }
+
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(ParentsLoginActivity.this,LoginActivity.class));
+        finish();
+    }
 }

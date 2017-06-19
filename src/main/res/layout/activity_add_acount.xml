@@ -21,7 +21,7 @@
         tools:context="com.dujiang.myapplication.AddAcountActivity">
 
         <LinearLayout
-            android:background="#53ffffff"
+            android:background="@drawable/back_style_main"
             android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
     <ImageView
         android:id="@+id/bing_pic_img"
         android:layout_width="match_parent"
@@ -17,76 +18,83 @@
         android:orientation="vertical"
         tools:context="com.dujiang.myapplication.AddParentActivity">
 
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="12dp"
-            android:orientation="horizontal"
-            android:padding="5dp">
+            android:background="@drawable/back_style_main"
+            android:gravity="center"
+            android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:src="@drawable/phoneparent" />
-
-            <EditText
-                android:id="@+id/et_parent_phone"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_weight="1"
-                android:hint="Phone number of relatives and friends" />
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="12dp"
-            android:orientation="horizontal"
-            android:padding="5dp">
+                android:layout_margin="12dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
 
-            <ImageView
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:src="@drawable/name12" />
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/phoneparent" />
 
-            <EditText
-                android:id="@+id/et_parent_name"
-                android:layout_width="0dp"
+                <EditText
+                    android:id="@+id/et_parent_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:hint="Phone number of relatives and friends" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_weight="1"
-                android:hint="Names of relatives and friends" />
+                android:layout_margin="12dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/name12" />
+
+                <EditText
+                    android:id="@+id/et_parent_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1"
+                    android:hint="Names of relatives and friends" />
+            </LinearLayout>
         </LinearLayout>
 
 
-
         <LinearLayout
-            android:layout_marginRight="24dp"
-            android:layout_marginLeft="24dp"
             android:layout_width="match_parent"
             android:layout_height="100dp"
+            android:layout_marginLeft="24dp"
+            android:layout_marginRight="24dp"
             android:orientation="horizontal">
 
             <Button
-                android:textColor="#fff"
                 android:id="@+id/btn_parent_save"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="12dp"
                 android:layout_weight="1"
                 android:background="@drawable/btn_circle"
-                android:text="保存" />
+                android:text="保存"
+                android:textColor="#fff" />
 
             <Button
-                android:textColor="#fff"
                 android:id="@+id/btn_parent_cancel"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_margin="12dp"
                 android:layout_weight="1"
                 android:background="@drawable/btn_circle"
-                android:text="取消" />
+                android:text="取消"
+                android:textColor="#fff" />
         </LinearLayout>
 
 

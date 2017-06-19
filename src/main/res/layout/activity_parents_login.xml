@@ -14,65 +14,79 @@
         android:scaleType="centerCrop" />
 
     <LinearLayout
-        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:gravity="center"
         android:orientation="vertical">
 
+        <!--登录界面介背景-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="12dp"
-            android:orientation="horizontal"
-            android:padding="5dp">
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/back_style"
+            android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="9dp"
-                android:src="@drawable/phone1" />
-
-            <EditText
-                android:id="@+id/login_input_phone_et"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="15dp"
-                android:hint="Phone Of Yourself" />
+                android:layout_margin="12dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
 
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="9dp"
+                    android:src="@drawable/phone1" />
+
+                <EditText
+                    android:id="@+id/login_input_phone_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="15dp"
+                    android:hint="Phone Of Yourself" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="9dp"
+                    android:src="@drawable/ic_duanxin" />
+
+                <EditText
+                    android:id="@+id/login_input_code_et"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="15dp"
+                    android:hint="Identifying Code" />
+
+            </LinearLayout>
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="12dp"
-            android:orientation="horizontal"
-            android:padding="5dp">
-
-            <ImageView
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="9dp"
-                android:src="@drawable/ic_duanxin" />
-
-            <EditText
-                android:id="@+id/login_input_code_et"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="5dp"
-                android:layout_marginTop="15dp"
-                android:hint="Identifying Code" />
-
-        </LinearLayout>
-
-        <LinearLayout
+            android:layout_marginTop="12dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <Button
+                android:layout_marginRight="12dp"
+                android:layout_marginLeft="6dp"
                 android:id="@+id/login_request_code_btn"
                 android:layout_width="95dp"
                 android:layout_height="95dp"
@@ -82,6 +96,8 @@
                 android:textColor="#ffffff" />
 
             <Button
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="6dp"
                 android:id="@+id/login_commit_btn"
                 android:layout_width="95dp"
                 android:layout_height="95dp"

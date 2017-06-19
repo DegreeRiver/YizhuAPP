@@ -99,7 +99,7 @@ public class RegisterActivity extends AppCompatActivity {
                     Toast.makeText(RegisterActivity.this, "对不起，该APP只能注册一次,请登录！！！", Toast.LENGTH_SHORT).show();
                     Intent intentLogin = new Intent(RegisterActivity.this, LoginActivity.class);
                     startActivity(intentLogin);
-                    return;
+                    finish();
                 }
                 cursor.close();
                 sqLiteDatabase.close();
@@ -127,10 +127,15 @@ public class RegisterActivity extends AppCompatActivity {
         tvBackLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
                 finish();
             }
         });
+    }
 
-
+    @Override
+    public void onBackPressed() {
+        startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
+        finish();
     }
 }

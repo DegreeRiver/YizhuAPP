@@ -33,19 +33,20 @@ import okhttp3.Response;
 
 
 import java.io.IOException;
+import java.util.Date;
 
 public class LoginActivity extends AppCompatActivity {
 
     private TextView tvRegister, tvParents;
 
-    private ImageView  iv1, iv2, iv3,bingPicImg;
+    private ImageView iv1, iv2, iv3, bingPicImg;
 
     private EditText etPhone, etCard, etPwd;
 
     private Button btnLogin;
 
     private ToggleButton tbPasswordVisibility;
-
+    private Date backTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,6 +64,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onAnimationStart(View view, Animator animation) {
                 view.setVisibility(View.INVISIBLE);
             }
+
             @Override
             public void onAnimationEnd(View view, Animator animation) {
 
@@ -155,6 +157,7 @@ public class LoginActivity extends AppCompatActivity {
                 Intent intentRegister = new Intent(LoginActivity.this, RegisterActivity.class);
                 //以返回结果的方式启动注册界面
                 startActivityForResult(intentRegister, 1);
+                finish();
             }
         });
         tvParents.setOnClickListener(new View.OnClickListener() {
@@ -162,6 +165,7 @@ public class LoginActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intentParents = new Intent(LoginActivity.this, ParentsLoginActivity.class);
                 startActivity(intentParents);
+                finish();
             }
         });
         tbPasswordVisibility.setOnCheckedChangeListener(new ToggleButtonClick());
@@ -209,4 +213,14 @@ public class LoginActivity extends AppCompatActivity {
     }
 
 
+    @Override
+    public void onBackPressed() {
+        Date currTime = new Date();
+        if (backTime == null || currTime.getTime() - backTime.getTime() > 2500) {
+            backTime = currTime;
+            Toast.makeText(this, "再次按下返回键退出！", Toast.LENGTH_SHORT).show();
+            return;
+        }
+        super.onBackPressed();
+    }
 }

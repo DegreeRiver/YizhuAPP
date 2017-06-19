@@ -18,6 +18,15 @@
         android:orientation="vertical"
         tools:context="com.dujiang.myapplication.ManagePhoneActivity">
 
+    <!--登录界面介背景-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/back_style_main"
+        android:orientation="vertical">
         <!--ID不显示出来-->
         <EditText
             android:id="@+id/et_manage_id1"
@@ -63,7 +72,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_weight="1" />
         </LinearLayout>
-
+</LinearLayout>
         <Button
             android:id="@+id/btn_manage_delete1"
             android:layout_width="match_parent"

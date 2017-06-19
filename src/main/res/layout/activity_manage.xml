@@ -8,103 +8,115 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop" />
+
     <LinearLayout xmlns:tools="http://schemas.android.com/tools"
         android:id="@+id/activity_manage"
-        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:gravity="center"
         android:orientation="vertical"
         tools:context="com.dujiang.myapplication.ManageActivity">
 
-        <!--ID不显示-->
-        <EditText
-            android:id="@+id/et_manage_id"
-            android:layout_width="0dp"
-            android:layout_height="0dp" />
-        <!--Type-->
+        <!--登录界面介背景-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="6dp"
-            android:orientation="horizontal"
-            android:padding="5dp">
-
-            <ImageView
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:src="@drawable/type" />
-
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:background="@drawable/back_style_main"
+            android:orientation="vertical">
+            <!--ID不显示-->
             <EditText
-                android:id="@+id/et_manage_type"
+                android:id="@+id/et_manage_id"
                 android:layout_width="0dp"
+                android:layout_height="0dp" />
+            <!--Type-->
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_weight="1" />
+                android:layout_margin="6dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
 
-        </LinearLayout>
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/type" />
 
-        <!--userId-->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="6dp"
-            android:orientation="horizontal"
-            android:padding="5dp">
+                <EditText
+                    android:id="@+id/et_manage_type"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1" />
 
-            <ImageView
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:src="@drawable/id" />
+            </LinearLayout>
 
-            <EditText
-                android:id="@+id/et_manage_userid"
-                android:layout_width="0dp"
+            <!--userId-->
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_weight="1" />
+                android:layout_margin="6dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
 
-        </LinearLayout>
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/id" />
 
-        <!--pwd-->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="6dp"
-            android:orientation="horizontal"
-            android:padding="5dp">
-            <ImageView
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:src="@drawable/pwd12" />
+                <EditText
+                    android:id="@+id/et_manage_userid"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1" />
 
-            <EditText
-                android:id="@+id/et_manage_pwd"
-                android:layout_width="0dp"
+            </LinearLayout>
+
+            <!--pwd-->
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_weight="1" />
+                android:layout_margin="6dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
 
-        </LinearLayout>
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/pwd12" />
 
-        <!--Other-->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="6dp"
-            android:orientation="horizontal"
-            android:padding="5dp">
+                <EditText
+                    android:id="@+id/et_manage_pwd"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1" />
 
-            <ImageView
-                android:layout_width="36dp"
-                android:layout_height="36dp"
-                android:src="@drawable/other" />
+            </LinearLayout>
 
-            <EditText
-                android:id="@+id/et_manage_other"
-                android:layout_width="0dp"
+            <!--Other-->
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:layout_weight="1" />
+                android:layout_margin="6dp"
+                android:orientation="horizontal"
+                android:padding="5dp">
+
+                <ImageView
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@drawable/other" />
+
+                <EditText
+                    android:id="@+id/et_manage_other"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_weight="1" />
+            </LinearLayout>
         </LinearLayout>
 
         <Button
@@ -113,7 +125,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="6dp"
             android:background="@drawable/btn_change"
-            android:text="Delete" />
+            android:text="Delete"
+            android:textColor="#fff" />
 
         <Button
             android:id="@+id/btn_manage_update"
@@ -121,7 +134,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="6dp"
             android:background="@drawable/btn_change"
-            android:text="Update" />
+            android:text="Update"
+            android:textColor="#fff" />
 
         <Button
             android:id="@+id/btn_manage_cancel"
@@ -129,7 +143,8 @@
             android:layout_height="wrap_content"
             android:layout_margin="6dp"
             android:background="@drawable/btn_change"
-            android:text="Cancel" />
+            android:text="Cancel"
+            android:textColor="#fff" />
 
     </LinearLayout>
 </FrameLayout>

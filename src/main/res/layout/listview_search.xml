@@ -5,9 +5,9 @@
     android:orientation="vertical">
 
     <LinearLayout
-        android:background="#64ffffff"
+        android:background="@drawable/back_style_item"
         android:orientation="vertical"
-        android:layout_width="500dp"
+        android:layout_width="match_parent"
         android:layout_height="240dp">
 
 
